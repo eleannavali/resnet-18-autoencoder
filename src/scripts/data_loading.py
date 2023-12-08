@@ -33,13 +33,14 @@ def get_simple_transform():
   ])
     return transform
 
-def get_cifar10_data_loaders(download, shuffle=False, batch_size=256):
+def get_cifar10_data_loaders(download, shuffle=False, batch_size=256, num_workers=10):
     """Load cifar10 datasets.
 
     Args:
         download (bool): if true download data, else use the already downloaded data
         shuffle (bool): parameter of DataLoader class fro train and test loader
         batch_size (int): the numbers of smaples to load per batch
+        num_workers (int): the number of worker processes to be created
 
     Returns:
         train_loader (DataLoader): loader with the training data
@@ -57,13 +58,13 @@ def get_cifar10_data_loaders(download, shuffle=False, batch_size=256):
                                     transform=transform)
 
     train_loader = DataLoader(train_dataset, batch_size=batch_size,
-                                num_workers=10, drop_last=False, shuffle=True)
+                                num_workers=num_workers, drop_last=False, shuffle=True)
 
     test_dataset = datasets.CIFAR10('./data', train=False, download=download,
                                     transform=transform)
 
     test_loader = DataLoader(test_dataset, batch_size=2*batch_size,
-                                num_workers=10, drop_last=False, shuffle=False)
+                                num_workers=num_workers, drop_last=False, shuffle=False)
     return train_loader, test_loader, train_dataset, test_dataset
 
 

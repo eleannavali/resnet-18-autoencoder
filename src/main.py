@@ -1,5 +1,5 @@
 
-from scripts.config import BATCH_SIZE, EPOCHS, MODEL_FILENAME, EARLY_STOP_THRESH, LR
+from scripts.config import BATCH_SIZE, EPOCHS, MODEL_FILENAME, EARLY_STOP_THRESH, LR, WORKERS
 from classes.resnet_autoencoder import AE
 from scripts.data_loading import get_cifar10_data_loaders
 from scripts.utils import train_epoch, test_epoch, plot_ae_outputs, checkpoint, resume
@@ -33,7 +33,7 @@ if __name__=='__main__':
     cae.to(device)
 
     print('Loading data...')
-    train_loader, test_loader, train_dataset, test_dataset = get_cifar10_data_loaders(download=True, batch_size=BATCH_SIZE)
+    train_loader, test_loader, train_dataset, test_dataset = get_cifar10_data_loaders(download=True, batch_size=BATCH_SIZE, num_workers=WORKERS)
    
     # Initialize varialbes
     best_val_loss = 1000000
