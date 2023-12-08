@@ -33,8 +33,9 @@ All experiments were conducted using Python 3.10.9 within a virtual environment.
 
     `git clone`
 
-2. Create a virtual environment with Python 3.10 inside the 'resnet-with-basic-autoencoder' folder:
+2. Create a virtual environment with Python 3.10 inside the 'src' folder:
 
+    `cd src`
     `python -m venv env`
 
 3. Activate the virtual environment:
