@@ -1,0 +1,6 @@
+1. Create virtual env with python 3.10:
+python -m venv env 
+2. Activate it:
+source env/bin/activate 
+3. Install requirements:
+pip3 install -r requirements.txt
