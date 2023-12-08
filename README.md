@@ -60,8 +60,8 @@ The results obtained from the training process, incorporating the early stopping
 
 Visual representations of the outcomes are available for both the training and testing datasets:
 
-![train results](https://github.com/eleannavali/thesis_code/blob/improve_quality/img/16_epoch_from_train_dataset.png)
-![test results](https://github.com/eleannavali/thesis_code/blob/improve_quality/img/16_epoch_from_test_dataset.png)
+![train results](https://github.com/eleannavali/resnet-18-autoencoder/blob/main/img/16_epoch_from_train_dataset.png)
+![test results](https://github.com/eleannavali/resnet-18-autoencoder/blob/main/img/16_epoch_from_test_dataset.png)
 
 
 
